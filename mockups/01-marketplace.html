@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XPrize · Marketplace</title>
+  <link rel="stylesheet" href="tw.css" />
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  </style>
+</head>
+<body class="bg-muted/40 text-foreground antialiased">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-60 shrink-0 border-r border-border bg-white flex flex-col">
+      <div class="px-5 py-5 border-b border-border">
+        <div class="text-lg font-semibold tracking-tight">XPrize</div>
+        <div class="text-xs text-muted-foreground">Curated AI marketplace</div>
+      </div>
+      <div class="px-5 py-3 border-b border-border">
+        <div class="text-[10px] uppercase tracking-wider text-muted-foreground mb-1.5">Active org</div>
+        <button class="w-full text-left flex items-center justify-between rounded-md border border-border px-2.5 py-1.5 text-sm hover:border-foreground/40">
+          <span class="flex items-center gap-2">
+            <span class="w-5 h-5 rounded-sm bg-amber-200 flex items-center justify-center text-[10px] font-semibold text-amber-900">L</span>
+            Livewire
+          </span>
+          <span class="text-muted-foreground">⌄</span>
+        </button>
+      </div>
+      <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">Dashboard</a>
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">Projects</a>
+        <a class="block rounded-md px-3 py-2 bg-accent text-foreground font-medium">Marketplace</a>
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">Playbooks</a>
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">Orgs</a>
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">Shared with me</a>
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">Payouts</a>
+        <a class="block rounded-md px-3 py-2 text-muted-foreground hover:bg-accent">New project</a>
+      </nav>
+      <div class="border-t border-border px-5 py-4 text-sm">
+        <div class="font-medium">Henry Forrest</div>
+        <div class="text-xs text-muted-foreground truncate">henry@getlivewire.com</div>
+        <div class="mt-2 inline-block rounded-md bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-900">Admin</div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1">
+      <div class="mx-auto max-w-6xl px-8 py-8">
+        <header class="space-y-2">
+          <h1 class="text-2xl font-semibold tracking-tight">Marketplace</h1>
+          <p class="text-sm text-muted-foreground">AI projects from across the network. Pledge to one, fork one, or bring an awarded one back to your org as a playbook.</p>
+        </header>
+
+        <!-- Filter row -->
+        <div class="mt-6 flex flex-wrap items-center gap-2">
+          <button class="rounded-md border border-foreground bg-foreground text-primary-foreground px-3 py-1.5 text-sm">All</button>
+          <button class="rounded-md border border-border bg-white px-3 py-1.5 text-sm hover:border-foreground/40">Open for pledges</button>
+          <button class="rounded-md border border-border bg-white px-3 py-1.5 text-sm hover:border-foreground/40">In progress</button>
+          <button class="rounded-md border border-border bg-white px-3 py-1.5 text-sm hover:border-foreground/40">Judging</button>
+          <button class="rounded-md border border-border bg-white px-3 py-1.5 text-sm hover:border-foreground/40">Awarded</button>
+          <div class="ml-auto flex items-center gap-2 text-sm">
+            <input type="text" placeholder="Search…" class="rounded-md border border-border bg-white px-3 py-1.5 text-sm w-56" />
+            <select class="rounded-md border border-border bg-white px-3 py-1.5 text-sm">
+              <option>Sort: Most upvoted</option>
+              <option>Largest prize pool</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Featured callout -->
+        <div class="mt-6 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-50 to-emerald-100/40 p-5 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-200 flex items-center justify-center text-emerald-900 text-xl">★</div>
+          <div class="flex-1">
+            <div class="text-xs font-semibold uppercase tracking-wide text-emerald-800">Featured</div>
+            <div class="text-base font-semibold mt-0.5">3 sponsors are looking for projects this week</div>
+            <div class="text-sm text-emerald-900/80 mt-0.5">OpenAI, Vercel, and Anthropic each have $1,000+ pledged toward integrator projects. Open an idea and tag for sponsorship.</div>
+          </div>
+          <button class="rounded-md bg-emerald-700 text-white px-3 py-2 text-sm font-medium">Submit an idea</button>
+        </div>
+
+        <!-- Grid of project cards -->
+        <div class="mt-6 grid gap-3 md:grid-cols-2">
+          <!-- Card 1 -->
+          <a class="block rounded-xl border border-border bg-white p-5 hover:border-foreground/40 transition">
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="w-4 h-4 rounded-sm bg-amber-200 flex items-center justify-center text-[9px] font-semibold text-amber-900">L</span>
+                  <span class="text-muted-foreground">Livewire</span>
+                  <span class="text-muted-foreground">·</span>
+                  <span class="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 text-blue-700 px-1.5 py-0.5 text-[10px] font-medium">Public</span>
+                </div>
+                <h3 class="text-base font-semibold mt-1.5 truncate">Voice-to-CRM for field service techs</h3>
+                <p class="text-sm text-muted-foreground mt-1 line-clamp-2">A mobile-first agent that ingests a tech's voice memo after a service call and writes back a structured update to HubSpot, Salesforce, or ServiceTitan.</p>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="text-lg font-semibold tabular-nums">$3,500</div>
+                <div class="mt-1">
+                  <span class="inline-flex items-center rounded-md border border-amber-200 bg-amber-50 text-amber-800 px-1.5 py-0.5 text-[10px] font-medium">In progress</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center gap-4 text-xs text-muted-foreground">
+              <span>▲ 42 votes</span>
+              <span>5 contributors</span>
+              <span class="ml-auto flex items-center gap-1">
+                <span class="text-muted-foreground">Sponsors:</span>
+                <span class="w-4 h-4 rounded-sm bg-emerald-200 flex items-center justify-center text-[8px] font-bold text-emerald-900">V</span>
+                <span class="w-4 h-4 rounded-sm bg-purple-200 flex items-center justify-center text-[8px] font-bold text-purple-900">A</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a class="block rounded-xl border border-border bg-white p-5 hover:border-foreground/40 transition">
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="w-4 h-4 rounded-sm bg-indigo-200 flex items-center justify-center text-[9px] font-semibold text-indigo-900">P</span>
+                  <span class="text-muted-foreground">Pinecrest AI</span>
+                  <span class="text-muted-foreground">·</span>
+                  <span class="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 text-blue-700 px-1.5 py-0.5 text-[10px] font-medium">Public</span>
+                </div>
+                <h3 class="text-base font-semibold mt-1.5 truncate">RAG over a Slack export, no infra</h3>
+                <p class="text-sm text-muted-foreground mt-1 line-clamp-2">Drop a Slack workspace export, get a private chatbot that answers "who knows about X?" / "what did we decide about Y?" — ships as one Vercel deploy.</p>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="text-lg font-semibold tabular-nums">$2,000</div>
+                <div class="mt-1">
+                  <span class="inline-flex items-center rounded-md border border-purple-200 bg-purple-50 text-purple-800 px-1.5 py-0.5 text-[10px] font-medium">Judging</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center gap-4 text-xs text-muted-foreground">
+              <span>▲ 38 votes</span>
+              <span>7 contributors</span>
+              <span class="ml-auto flex items-center gap-1">
+                <span class="text-muted-foreground">Sponsors:</span>
+                <span class="w-4 h-4 rounded-sm bg-emerald-200 flex items-center justify-center text-[8px] font-bold text-emerald-900">V</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a class="block rounded-xl border border-border bg-white p-5 hover:border-foreground/40 transition">
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="w-4 h-4 rounded-sm bg-rose-200 flex items-center justify-center text-[9px] font-semibold text-rose-900">N</span>
+                  <span class="text-muted-foreground">Northbeam Studio</span>
+                  <span class="text-muted-foreground">·</span>
+                  <span class="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 text-blue-700 px-1.5 py-0.5 text-[10px] font-medium">Public</span>
+                </div>
+                <h3 class="text-base font-semibold mt-1.5 truncate">Open-source meeting recap GPT for Zoom</h3>
+                <p class="text-sm text-muted-foreground mt-1 line-clamp-2">Action items, decisions, and follow-ups posted to Slack within 60s of meeting end. Self-hostable.</p>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="text-lg font-semibold tabular-nums">$5,000</div>
+                <div class="mt-1">
+                  <span class="inline-flex items-center rounded-md border border-emerald-200 bg-emerald-50 text-emerald-800 px-1.5 py-0.5 text-[10px] font-medium">Awarded</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center gap-4 text-xs text-muted-foreground">
+              <span>▲ 91 votes</span>
+              <span>12 contributors</span>
+              <span class="ml-auto flex items-center gap-1">
+                <span class="text-muted-foreground">Sponsors:</span>
+                <span class="w-4 h-4 rounded-sm bg-emerald-200 flex items-center justify-center text-[8px] font-bold text-emerald-900">V</span>
+                <span class="w-4 h-4 rounded-sm bg-purple-200 flex items-center justify-center text-[8px] font-bold text-purple-900">A</span>
+                <span class="w-4 h-4 rounded-sm bg-sky-200 flex items-center justify-center text-[8px] font-bold text-sky-900">O</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 4 — Idea -->
+          <a class="block rounded-xl border border-dashed border-border bg-white/60 p-5 hover:border-foreground/40 transition">
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="w-4 h-4 rounded-sm bg-amber-200 flex items-center justify-center text-[9px] font-semibold text-amber-900">L</span>
+                  <span class="text-muted-foreground">Livewire</span>
+                  <span class="text-muted-foreground">·</span>
+                  <span class="inline-flex items-center rounded-md border border-slate-200 bg-slate-100 text-slate-700 px-1.5 py-0.5 text-[10px] font-medium">Idea · seeking sponsor</span>
+                </div>
+                <h3 class="text-base font-semibold mt-1.5 truncate">An "agent for your inbox" that drafts replies in your voice</h3>
+                <p class="text-sm text-muted-foreground mt-1 line-clamp-2">Reads your last 500 sent emails to learn tone, then drafts replies you only need to approve. Outlook + Gmail.</p>
+              </div>
+              <div class="text-right shrink-0">
+                <div class="text-sm font-medium text-muted-foreground">No prize yet</div>
+                <button class="mt-2 rounded-md border border-emerald-300 bg-emerald-50 text-emerald-800 px-2.5 py-1 text-xs font-medium hover:bg-emerald-100">+ Pledge</button>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center gap-4 text-xs text-muted-foreground">
+              <span>▲ 27 votes</span>
+              <span>0 contributors</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

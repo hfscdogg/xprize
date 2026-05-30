@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XPrize · Pledge a prize</title>
+  <link rel="stylesheet" href="tw.css" />
+  <style>body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }</style>
+</head>
+<body class="bg-slate-900/40 text-foreground antialiased min-h-screen">
+  <!-- Page underlay (faded) -->
+  <div class="fixed inset-0 bg-slate-200/60 overflow-hidden">
+    <div class="mx-auto max-w-6xl px-8 py-8 blur-sm opacity-60">
+      <div class="text-2xl font-semibold tracking-tight">Voice-to-CRM for field service techs</div>
+      <div class="mt-4 rounded-2xl border border-border bg-white p-5 h-40"></div>
+      <div class="mt-4 grid grid-cols-2 gap-2">
+        <div class="h-20 rounded-lg border border-border bg-white"></div>
+        <div class="h-20 rounded-lg border border-border bg-white"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="relative min-h-screen flex items-start justify-center pt-16 pb-12 px-4">
+    <div class="w-full max-w-xl rounded-2xl bg-white shadow-2xl border border-border p-7">
+      <!-- Header -->
+      <div class="flex items-start justify-between">
+        <div>
+          <div class="text-[10px] uppercase tracking-wider text-emerald-700 font-semibold">Sponsor pledge</div>
+          <h2 class="text-xl font-semibold mt-0.5">Pledge a prize</h2>
+          <div class="mt-1 flex items-center gap-2 text-xs text-muted-foreground">
+            <span class="w-4 h-4 rounded-sm bg-amber-200 flex items-center justify-center text-[9px] font-semibold text-amber-900">L</span>
+            <span>Livewire</span>
+            <span>·</span>
+            <span>Voice-to-CRM for field service techs</span>
+          </div>
+        </div>
+        <button class="text-muted-foreground hover:text-foreground text-xl leading-none">×</button>
+      </div>
+
+      <!-- Pledging-as -->
+      <div class="mt-5 rounded-lg border border-border bg-muted/40 p-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-md bg-emerald-200 flex items-center justify-center text-emerald-900 font-bold">V</span>
+          <div>
+            <div class="text-sm font-medium">Pledging as Vercel</div>
+            <div class="text-xs text-muted-foreground">Sponsor org · Verified</div>
+          </div>
+        </div>
+        <button class="text-xs text-muted-foreground underline">Switch sponsor</button>
+      </div>
+
+      <!-- Kind toggle -->
+      <div class="mt-5">
+        <div class="text-xs font-medium mb-1.5">Prize type</div>
+        <div class="grid grid-cols-2 gap-2">
+          <button class="rounded-lg border border-foreground bg-foreground/[0.04] px-4 py-3 text-left">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm font-semibold">Cash</div>
+                <div class="text-xs text-muted-foreground">Paid out by sponsor when awarded</div>
+              </div>
+              <div class="w-4 h-4 rounded-full border-2 border-foreground flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-foreground"></div>
+              </div>
+            </div>
+          </button>
+          <button class="rounded-lg border border-border bg-white px-4 py-3 text-left hover:border-foreground/40">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm font-semibold">Gear</div>
+                <div class="text-xs text-muted-foreground">Hardware, swag, credits, etc.</div>
+              </div>
+              <div class="w-4 h-4 rounded-full border-2 border-border"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cash form (active) -->
+      <div class="mt-5">
+        <label class="block">
+          <span class="block text-xs font-medium mb-1">Amount (USD)</span>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
+            <input value="1,500" class="w-full rounded-md border border-border bg-white pl-7 pr-3 py-2.5 text-base font-medium tabular-nums" />
+          </div>
+          <div class="mt-1.5 flex gap-1">
+            <button class="rounded-md border border-border bg-white px-2 py-0.5 text-[11px] text-muted-foreground hover:border-foreground/40">$250</button>
+            <button class="rounded-md border border-border bg-white px-2 py-0.5 text-[11px] text-muted-foreground hover:border-foreground/40">$500</button>
+            <button class="rounded-md border border-foreground bg-foreground/[0.04] px-2 py-0.5 text-[11px] font-medium">$1,500</button>
+            <button class="rounded-md border border-border bg-white px-2 py-0.5 text-[11px] text-muted-foreground hover:border-foreground/40">$5,000</button>
+          </div>
+        </label>
+
+        <label class="block mt-4">
+          <span class="block text-xs font-medium mb-1">Note to project owner (optional)</span>
+          <textarea rows="2" class="w-full rounded-md border border-border bg-white px-3 py-2 text-sm" placeholder="Anything Livewire should know — preferred announcement, payout method, etc.">We'd love attribution as 'Powered by Vercel' on the demo. Will wire on fulfillment.</textarea>
+        </label>
+      </div>
+
+      <!-- How payout works -->
+      <div class="mt-5 rounded-lg border border-border bg-muted/30 p-3 text-xs space-y-1.5">
+        <div class="font-medium text-foreground">How payout works</div>
+        <ol class="list-decimal pl-5 space-y-0.5 text-muted-foreground">
+          <li>Livewire accepts your pledge — it shows on the project page.</li>
+          <li>When a winner is selected, your prize attaches to them automatically.</li>
+          <li>You mark your prize <em>fulfilled</em> once you've actually wired the cash (IOU model — no escrow in v2).</li>
+        </ol>
+      </div>
+
+      <!-- Actions -->
+      <div class="mt-6 flex justify-end gap-2">
+        <button class="rounded-md border border-border bg-white px-4 py-2 text-sm font-medium">Cancel</button>
+        <button class="rounded-md bg-foreground text-primary-foreground px-4 py-2 text-sm font-medium">Pledge $1,500</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
